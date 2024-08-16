@@ -152,7 +152,22 @@ for index, row in sampled_df.iterrows():
 # In[ ]:
 
 
+    parameter_df = pd.read_excel(os.path.join(output_subdirectory, "classifier_testing_parameters.xlsx"))
 
+    test_id_list = parameter_df['test_ID'].to_list()
+
+    import random
+
+    test_ID = None
+
+    while True:
+        rand_num = random.randint(1, 9999)
+        formatted_rand_num = f"{rand_num:04d}"
+        if int(formatted_rand_num) not in test_id_list:
+            test_ID = int(formatted_rand_num)
+            break
+
+    print(test_ID)
 
 
 # ## Prepping training data ##

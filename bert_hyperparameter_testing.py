@@ -465,5 +465,6 @@ for index, row in sampled_df.iterrows():
     df_updated.to_excel(parameters_file, index=False)
 
     print(f"Data for {test_ID} has been added to {parameters_file}. Final accuracy: {final_accuracy}")
+    del model
     torch.cuda.empty_cache()
 

@@ -437,7 +437,7 @@ for index, row in sampled_df.iterrows():
         
         
         ##UPDATE FILE NAME FOR EACH TEST!
-        with open(file_path, 'a') as f:
+        with open(accuracy_path, 'a') as f:
             f.write(report)
             
             

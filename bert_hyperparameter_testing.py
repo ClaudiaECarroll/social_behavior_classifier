@@ -68,8 +68,10 @@ ml = params['max_length'].dropna().tolist()
 # In[21]:
 
 
-bm.remove('roBERTa-large')
-bm.remove('roBERTa-large')
+if 'roBERTa-large' in bm:
+    bm.remove('roBERTa-large')
+if 'roBERTa-base' in bm:
+    bm.remove('roBERTa-large')
 
 
 # In[22]:

@@ -48,10 +48,6 @@ num_classes = 3
 params = pd.read_excel("classifier_testing/hyperparameter_testing.xlsx")
 
 
-# In[5]:
-
-
-params.head()
 
 
 # In[16]:
@@ -64,14 +60,14 @@ ne = params['num_epochs'].dropna().tolist()
 bs = params['batch_size'].dropna().tolist()
 ml = params['max_length'].dropna().tolist()
 
-print(bm)
+
 
 strings_to_remove = ['roBERTa-base', 'roBERTa-large']
 
 # Loop through the list and remove the strings if found
 bm = [s for s in bm if s not in strings_to_remove]
 
-print(bm)
+
 
 
 
@@ -101,7 +97,6 @@ df_hyper = pd.DataFrame(combinations, columns=['td', 'bm', 'lr', 'ne', 'bs', 'ml
 df_hyper_unique = df_hyper.drop_duplicates()
 
 
-df_hyper_unique.to_excel("hyper_combinations.xlsx")
 
 
 # In[31]:
@@ -133,7 +128,7 @@ if sampled_df.shape[0] > sample_size:
 # In[32]:
 
 
-sampled_df.info()
+
 
 
 # In[41]:
@@ -180,8 +175,6 @@ for index, row in sampled_df.iterrows():
 
 # In[42]:
 
-
-    print(training_data[:5])
 
 
     # In[190]:
@@ -230,21 +223,6 @@ for index, row in sampled_df.iterrows():
     # In[192]:
 
 
-    df.head()
-
-
-    # In[193]:
-
-
-    df.info()
-
-
-    # In[194]:
-
-
-    #Sanity check
-
-    df['category'].unique()
 
 
     # In[195]:
@@ -283,20 +261,9 @@ for index, row in sampled_df.iterrows():
 
 
     labels = torch.tensor(designation_numeric)
-    type(labels)
 
 
-    # In[200]:
 
-
-    #Sanity check
-    len(texts)
-
-
-    # In[199]:
-
-
-    len(labels)
 
 
     # ## Setting up classes and functions for classifier ##

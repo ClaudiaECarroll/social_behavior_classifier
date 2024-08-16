@@ -181,13 +181,7 @@ for index, row in sampled_df.iterrows():
 # In[42]:
 
 
-    training_data.head()
-
-
-    # In[189]:
-
-
-    training_data.info()
+    print(training_data[:5])
 
 
     # In[190]:

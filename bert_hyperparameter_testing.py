@@ -203,10 +203,17 @@ for index, row in sampled_df.iterrows():
     index1 = []
 
     for index, row in training_data.iterrows():
-        values = [row['eric_category'], row['lucia_category'], row['sada_category']]
+        # Check if 'sada_category' column exists
+        if 'sada_category' in training_data.columns:
+            # Use all three columns
+            values = [row['eric_category'], row['lucia_category'], row['sada_category']]
+        else:
+            # Use only 'eric_category' and 'lucia_category'
+            values = [row['eric_category'], row['lucia_category']]
+        
         common_label = None
         
-        # Find the label that appears at least twice
+        # Find the label that appears at least twice (or once if only two values are checked)
         for value in set(values):
             if values.count(value) >= 2:
                 common_label = value

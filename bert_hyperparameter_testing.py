@@ -144,9 +144,9 @@ for index, row in sampled_df.iterrows():
     training_data = pd.read_excel(td)
     bert_model_name = row['bm']
     learning_rate = row['lr']
-    num_epochs = row['ne']
-    batch_size = row['bs']
-    max_length = row['ml']
+    num_epochs = int(row['ne'])
+    batch_size = int(row['bs'])
+    max_length = int(row['ml'])
 
 
 # In[ ]:

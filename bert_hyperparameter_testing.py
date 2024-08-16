@@ -64,14 +64,16 @@ ne = params['num_epochs'].dropna().tolist()
 bs = params['batch_size'].dropna().tolist()
 ml = params['max_length'].dropna().tolist()
 
+print(bm)
 
-# In[21]:
+strings_to_remove = ['roBERTa-base', 'roBERTa-large']
+
+# Loop through the list and remove the strings if found
+bm = [s for s in bm if s not in strings_to_remove]
+
+print(bm)
 
 
-if 'roBERTa-large' in bm:
-    bm.remove('roBERTa-large')
-if 'roBERTa-base' in bm:
-    bm.remove('roBERTa-large')
 
 
 # In[22]:

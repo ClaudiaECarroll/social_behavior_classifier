@@ -28,11 +28,7 @@ import pandas as pd
 training_subdirectory = "/home/claudiac/projects/social_behavior_classifier/training_data/"
 output_subdirectory = "/home/claudiac/projects/social_behavior_classifier/classifier_testing/"
 
-accuracy_file = str(test_ID) + "_accuracy_scores.docx"
-classifier_name = "bert_classifier_" + str(test_ID) + ".pth"
-accuracy_path = os.path.join(output_subdirectory, accuracy_file)
-classifier_path = os.path.join(output_subdirectory, classifier_name)
-parameters_file = os.path.join(output_subdirectory, "classifier_testing_parameters.xlsx")
+
 
 
 # ## Setting test name and hyperparameters ##
@@ -168,6 +164,12 @@ for index, row in sampled_df.iterrows():
             break
 
     print(test_ID)
+
+    accuracy_file = str(test_ID) + "_accuracy_scores.docx"
+    classifier_name = "bert_classifier_" + str(test_ID) + ".pth"
+    accuracy_path = os.path.join(output_subdirectory, accuracy_file)
+    classifier_path = os.path.join(output_subdirectory, classifier_name)
+    parameters_file = os.path.join(output_subdirectory, "classifier_testing_parameters.xlsx")
 
 
 # ## Prepping training data ##

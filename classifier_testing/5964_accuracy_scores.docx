@@ -1,0 +1,54 @@
+              precision    recall  f1-score   support
+
+           0       0.90      0.84      0.87        64
+           1       0.94      0.78      0.85       104
+           2       0.86      0.96      0.91       187
+
+    accuracy                           0.89       355
+   macro avg       0.90      0.86      0.88       355
+weighted avg       0.89      0.89      0.89       355
+              precision    recall  f1-score   support
+
+           0       0.92      0.88      0.90        64
+           1       0.76      0.95      0.84       104
+           2       0.97      0.84      0.90       187
+
+    accuracy                           0.88       355
+   macro avg       0.88      0.89      0.88       355
+weighted avg       0.90      0.88      0.88       355
+              precision    recall  f1-score   support
+
+           0       0.90      0.86      0.88        64
+           1       0.94      0.90      0.92       104
+           2       0.93      0.96      0.94       187
+
+    accuracy                           0.93       355
+   macro avg       0.92      0.91      0.92       355
+weighted avg       0.93      0.93      0.93       355
+              precision    recall  f1-score   support
+
+           0       0.88      0.94      0.91        64
+           1       0.91      0.92      0.92       104
+           2       0.97      0.94      0.95       187
+
+    accuracy                           0.94       355
+   macro avg       0.92      0.93      0.93       355
+weighted avg       0.94      0.94      0.94       355
+              precision    recall  f1-score   support
+
+           0       0.88      0.92      0.90        64
+           1       0.92      0.90      0.91       104
+           2       0.95      0.95      0.95       187
+
+    accuracy                           0.93       355
+   macro avg       0.92      0.92      0.92       355
+weighted avg       0.93      0.93      0.93       355
+              precision    recall  f1-score   support
+
+           0       0.88      0.94      0.91        64
+           1       0.92      0.90      0.91       104
+           2       0.96      0.95      0.95       187
+
+    accuracy                           0.93       355
+   macro avg       0.92      0.93      0.92       355
+weighted avg       0.93      0.93      0.93       355
